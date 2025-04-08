@@ -42,7 +42,7 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navagation_bar"
         android:layout_width="match_parent"
-        android:layout_height="115dp"
+        android:layout_height="?attr/actionBarSize"
         app:itemTextColor="@color/black"
         app:itemIconSize="20dp"
         app:labelVisibilityMode="labeled"

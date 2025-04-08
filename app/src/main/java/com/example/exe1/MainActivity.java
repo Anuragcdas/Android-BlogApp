@@ -62,12 +62,7 @@ public class MainActivity extends AppCompatActivity {
             return true;
         });
 
-        // Handle system window insets
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, 0);
-            return insets;
-        });
+
     }
 
     private void loadFragment(Fragment fragment) {
