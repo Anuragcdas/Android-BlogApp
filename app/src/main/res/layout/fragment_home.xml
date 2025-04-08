@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Search View aligned at the top -->
+    <androidx.appcompat.widget.SearchView
+
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:queryHint="Search Post"
+        app:iconifiedByDefault="true"
+        android:layout_margin="8dp"
+        android:background="@drawable/search_background"
+        android:layout_alignParentTop="true" />
+
+    <!-- Progress Bar below SearchView -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:max="100"
+        android:progress="0"
+        android:visibility="gone"
+        android:layout_below="@id/searchView"/>
+
+    <!-- RecyclerView positioned between SearchView and FAB -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/progressBar"
+        android:layout_alignParentEnd="true"
+        android:clipToPadding="false"
+        android:padding="8dp" />
+
+    <!-- Floating Action Button aligned to bottom-right -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_input_add"
+        android:tint="@android:color/white" />
+
+</RelativeLayout>
